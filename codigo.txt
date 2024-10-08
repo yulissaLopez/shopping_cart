@@ -1,0 +1,12 @@
+if pk:
+            user = User.objects.get(id=pk)
+            user_dict = {
+                "id" : user.id,
+                "username" : user.username,
+                "email" : user.email,
+                "birth_date" : user.birth_date,
+                "biography" : user.biography
+            }
+
+            print(user_dict)
+            return JsonResponse(user_dict)
